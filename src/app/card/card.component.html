@@ -1,0 +1,15 @@
+<section class="card">
+  <div class="card__back">
+    <p>{{ cardCVV() || "000" }}</p>
+  </div>
+  <div class="card__front">
+    <img src="/images/card-logo.svg" alt="" />
+    <p class="number">
+      {{ cardNumber() || "0000 0000 0000 0000" }}
+    </p>
+    <div class="card__info">
+      <p class="name">{{ cardName() || "jhon Doe" }}</p>
+      <p class="date">{{ cardDate() || "00/00" }}</p>
+    </div>
+  </div>
+</section>

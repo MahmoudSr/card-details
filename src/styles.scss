@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Layout Breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+
+  /* Primary Colors */
+  --gradient-active-border: linear-gradient(
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
+
+  --color-error: hsl(0, 100%, 66%);
+
+  /* Neutral Colors */
+  --color-white: hsl(0, 100%, 100%);
+  --color-gray-200: hsl(270, 3%, 87%);
+  --color-gray-400: hsl(212, 12%, 71%);
+  --color-purple-950: hsl(278, 68%, 11%);
+
+  /* Typography */
+  --font-family: "Space Grotesk", sans-serif;
+  --font-size-body: 1.125rem;
+  --font-weight-medium: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-purple-950);
+  background-color: var(--color-white);
+  min-height: 100vh;
+}

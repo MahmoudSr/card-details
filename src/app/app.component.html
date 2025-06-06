@@ -1,0 +1,43 @@
+@if(cardForm) {
+<form [formGroup]="cardForm">
+  <input
+    type="text"
+    formControlName="card_number"
+    maxlength="19"
+    inputmode="numeric"
+    pattern="[0-9\s]*"
+    placeholder="0000 0000 0000 0000"
+  />
+  <input
+    type="text"
+    formControlName="card_date"
+    maxlength="5"
+    inputmode="numeric"
+    pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+    placeholder="MM/YY"
+  />
+
+  <input
+    type="text"
+    formControlName="card_name"
+    maxlength="30"
+    placeholder="Full Name"
+  />
+
+  <input
+    type="text"
+    formControlName="card_cvv"
+    maxlength="3"
+    inputmode="numeric"
+    pattern="\d{3}"
+    placeholder="000"
+  />
+</form>
+}
+
+<app-card
+  [cardNumber]="cardNumber()"
+  [cardDate]="cardDate()"
+  [cardName]="cardName()"
+  [cardCVV]="cardCVV()"
+></app-card>

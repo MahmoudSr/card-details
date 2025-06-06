@@ -1,0 +1,42 @@
+.card {
+  //   display: flex;
+  //   flex-direction: column;
+
+  &__front,
+  &__back {
+    width: 447px;
+    height: 245px;
+  }
+
+  &__front {
+    background-image: url("/images/bg-card-front.png");
+    padding: 1.5em;
+    color: var(--color-white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    .number {
+      font-size: 1.4em;
+      letter-spacing: 5px;
+      padding-top: 1.5em;
+    }
+  }
+
+  &__back {
+    background-image: url("/images/bg-card-back.png");
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-inline: 3em;
+    padding-bottom: 0.2em;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
